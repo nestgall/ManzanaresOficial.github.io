@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manzanares.lopez/grafito</title>
+     <link rel="icon" href="fondo_manzanares.lopez.png" type = "image/png">
+</head>
+<body>
+  
+
+
+   <div class = "galerias">
+
+
+
+<div class = obra>
+
+    <img src="grito.jpg" alt="Error 01: falló de imagen" width="350"
+    
+    onclick="abrirModal('grito.jpg', 'Gran grito', 'Fecha de terminado: 28/07/2024')">
+
+
+</div>
+
+<div class = "obra">
+<img src="mariposa.jpg" alt="Error 01: falló de imagen" width="350"
+onclick="abrirModal('mariposa.jpg', ' ', 'Fecha de terminado: 09/09/2024')">
+
+</div>
+
+
+
+<div class = "obra">
+<img src="heriodoarmas.jpg" alt="Error 01: falló de imagen" width="350"
+onclick="abrirModal('heriodoarmas.jpg', 'Herido por tus armas', 'Fecha de terminado: 21/12/2024')">
+
+</div>
+
+
+
+<div class = "obra">
+
+<img src="unoeneroluna.jpg" alt="Error 01: falló de imagen" width="350"
+
+onclick="abrirModal('unoeneroluna.jpg', ' ', 'Fecha de terminado: 01/01/2025')">
+
+</div>
+
+
+
+
+<div class = "obra">
+
+        <img src="inocente.jpg" alt="Error 01: falló de imagen" width="350"
+        onclick="abrirModal('inocente.jpg', 'No eres inocente', 'Fecha de terminado: 17/03/2025')">
+
+</div>
+
+
+
+
+
+
+<div class = "obra">
+
+       <img src="vm.jpg" alt="Error 01: falló de imagen" width="350"
+       onclick="abrirModal('vm.jpg', 'Vida y muerte', 'Fecha de terminado: 23/04/2025')">
+
+
+</div>
+
+
+
+<div class = "obra">
+
+    <img src="condena.jpg" alt="Error 01: falló de imagen" width="350"
+    
+    
+    onclick="abrirModal('condena.jpg', 'Condena', 'Fecha de terminado: 26/04/2025')">
+</div>
+
+<div class = "obra">
+
+    <img src="liberacion.jpg" alt="Error 01: falló de imagen" width="350"
+    
+    onclick="abrirModal('liberacion.jpg', 'Liberación', 'Fecha de terminado: 18/04/2025')">
+
+</div>
+
+    </div><!-- div final -->
+
+
+
+
+
+    <!-- ============================texto de pie=============================================================== -->
+ 
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <img id="modal-img" src="" alt="Obra ampliada">
+    <div class="modal-info">
+      <h2 id="modal-title">Título de la obra</h2>
+      <p id="modal-text">Aquí va la descripción larga de la obra.</p>
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================fin del HTML======================================================================= -->
+
+<script>
+
+
+ const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalText = document.getElementById('modal-text');
+  const cerrarBtn = document.getElementById('cerrar');
+
+
+
+  //para cerrar cuando se hace click afuera de la imagen
+  window.addEventListener('click', (e) => {
+
+    if(e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+
+  
+// pa mostrar el cuadrto con info
+  function abrirModal(src, titulo, descripcion) {
+    modalImg.src = src;
+    modalTitle.textContent = titulo;
+    modalText.textContent = descripcion;
+    modal.style.display = 'flex';
+  };
+
+
+</script>
+
+
+
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+
+
+.galerias{
+background-color: rgba(0, 0, 0, 0.966);
+display: flex;
+padding: 50px;
+flex-wrap: wrap;
+
+    justify-content: center;
+   gap: 20px;
+
+}
+
+.obra{
+
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+
+
+/*==================================para onclick================================================*/
+.modal {
+  display: none; /* escondido al inicio */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background-color: black;
+  padding: 30px;
+  max-width: 900px;
+  width: 40%;
+  color: gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 400px;
+  
+}
+
+.modal-info {
+  color: white;
+  font-family: Caveat, sans-serif;
+  color: gray;
+}
+
+
+
+
+
+</style>
+
+  </style>
+
+
+</html>
